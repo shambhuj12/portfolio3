@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #certificates-section h2 {
+            color: #007BFF;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #certificates-section .certificate-custom {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            margin: 40px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            border: solid 2px #0066804e;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #certificates-section .certificate-custom:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        #certificates-section .card-text {
+            flex-grow: 1;
+            margin-bottom: 20px;
+        }
+
+        #certificates-section .view-cert-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            border-radius: 25px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+        }
+
+        #certificates-section .view-cert-btn:hover {
+            background-color: #3f9443;
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            #certificates-section .certificate-custom {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="certificates-section">
+        <h2>Certificates</h2>
+        <div id="certificates">
+            <div class="certificate-custom">
+                <p class="card-text">Google Cloud Computing Foundations Program</p>
+                <button class="view-cert-btn" onclick="window.open('./Docs/Google Cloud.pdf', '_blank')">View
+                    Certificate</button>
+            </div>
+
+            <div class="certificate-custom">
+                <p class="card-text">MERN Full Stack Internship Program</p>
+                <button class="view-cert-btn" onclick="window.open('./Docs/MERN.pdf', '_blank')">View
+                    Certificate</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

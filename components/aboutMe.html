@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+</head>
+<style>
+    #about .about-content {
+        display: flex;
+        align-items: center;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #about .image-container {
+        flex-shrink: 0;
+        margin-right: 40px;
+    }
+
+    #about .image-container img {
+        max-width: 300px;
+        border-radius: 50%;
+    }
+
+    #about .text-container {
+        flex-grow: 1;
+    }
+
+    /* General Body Styling */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+    }
+
+    /* General Section Styling */
+    section {
+        padding: 60px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /* Section Containers */
+    section .container {
+        background-color: #ffffff;
+        border-radius: 15px;
+        padding: 20px 30px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+        max-width: 800px;
+        text-align: center;
+        margin: 20px 0;
+        border: solid 2px #0028535e;
+    }
+
+    section .container h2 {
+        margin-bottom: 15px;
+        color: #007BFF;
+    }
+
+    section .container p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    /* Apply magnification effect to the entire container */
+    #about .container:hover {
+        transform: scale(1.1);
+        /* Magnification on hover */
+        z-index: 1;
+        /* Ensure the scaled content stays above other elements */
+    }
+</style>
+<section id="about" class="py-5">
+    <div class="container">
+        <div class="about-content">
+            <div class="image-container">
+                <!-- Replace with your image -->
+                <img src="../photos/Shambhu.JPG" alt="Shambhu Niwas Jagtap" class="image-fluid">
+            </div>
+            <div class="text-container">
+                <h2>About Me</h2>
+                <p>I am Shambhu Niwas Jagtap, a final-year Computer Science Engineering student at VIT Chennai, with a
+                    passion for web development and data analytics. With a strong foundation in programming languages
+                    like Java, SQL, and Python, and expertise in frameworks such as React.js, I
+                    aim to create impactful and efficient solutions. My journey includes hands-on experience with
+                    interactive web applications, data visualization, and sentiment analysis, consistently demonstrating
+                    a commitment to
+                    delivering high-quality results.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+</html>

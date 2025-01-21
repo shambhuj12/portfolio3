@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Title Styling */
+        #heading {
+            color: #007BFF;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        #projects {
+            padding: 10px;
+        }
+
+        .card-custom {
+            width: 60%;
+            /* 80% of the horizontal page size */
+            display: flex;
+            /* Using flexbox */
+            flex-direction: row;
+            /* Align image and text side by side */
+            margin: 40px auto;
+            /* Centering the card */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            /* Rounded corners for the card */
+            border: solid 2px #0028535e;
+            /* Blue border */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 30px;
+            /* Padding between cards */
+        }
+
+        .card-custom img {
+            width: 100%;
+            /* Image takes up 100% of the card's width */
+            max-width: 200px;
+            /* Ensure the image doesn't get too large on bigger screens */
+            object-fit: cover;
+            /* Ensures the image covers the space */
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            margin: 20px;
+            /* Adding margin around the image */
+            border-radius: 10px;
+            /* Rounded corners for the image */
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px 20px 20px 20px;
+            text-align: left;
+            /* Aligning the text to the left */
+            width: 60%;
+            /* Text takes up 60% of the card width */
+        }
+
+        /* Hover effect to magnify the card */
+        .card-custom:hover {
+            transform: scale(1.10);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Styling for the Tools/Language section */
+        .tools {
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* technology styles */
+        .reactTools {
+            background-color: #61dcfb7d;
+            color: #20232a;
+            padding: 2px 8px;
+            border-radius: 5px;
+            margin: 3px;
+        }
+
+        .excelTools {
+            background-color: #00c8466c;
+            color: #20232a;
+            padding: 2px 8px;
+            border-radius: 5px;
+            margin: 3px;
+        }
+
+        .powerBiTools {
+            background-color: #c1c8006c;
+            color: #20232a;
+            padding: 2px 8px;
+            border-radius: 5px;
+            margin: 3px;
+        }
+
+        .pythonTools {
+            background-color: #9d00c86c;
+            color: #20232a;
+            padding: 2px 8px;
+            border-radius: 5px;
+            margin: 3px;
+        }
+
+        .otherTools {
+
+            background-color: #c800006c;
+            color: #20232a;
+            padding: 2px 8px;
+            border-radius: 5px;
+            margin: 3px;
+        }
+
+        /* Styling for the Visit Site button */
+        .visit-site-btn {
+            background-color: #4CAF50;
+            /* A sleek green for a professional look */
+            color: white;
+            border: none;
+            padding: 10px 10px;
+            font-size: 14px;
+            border-radius: 25px;
+            /* Rounded button */
+
+            /* Aligns the button to the right */
+            transition: all 0.3s ease-in-out;
+            /* Smooth hover effect */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Soft shadow */
+        }
+
+        .visit-site-btn:hover {
+            background-color: #45a049;
+            /* Slightly darker green on hover */
+            transform: scale(1.05);
+            /* Subtle grow effect */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            /* Slightly deeper shadow */
+        }
+
+        /* Media Query for Smaller Screens */
+        @media (max-width: 768px) {
+            .card-custom {
+                flex-direction: column;
+                /* Stack the content vertically on smaller screens */
+            }
+
+            .card-body {
+                width: 80%;
+                /* Allow text to take full width when stacked */
+            }
+
+            .card-custom img {
+                width: 70%;
+                /* Ensure the image takes up full width in the stacked layout */
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2 id="heading">Projects</h2>
+    <div id="projects">
+        <div class="card-custom">
+            <img src="../photos/ReactLogo.png" class="card-img-top" alt="Tic Tac Toe Image">
+            <div class="card-body">
+                <p class="card-text">The Tic Tac Toe Game is a simple, interactive web-based application developed using
+                    React. The game allows two players to take turns marking the spaces in a 3x3 grid with "X" and "O"
+                    symbols. Designed intuitive UI/UX features and implemented dynamic game logic, ensuring an engaging
+                    and seamless user
+                    experience.</p>
+                <div class="d-flex align-items-center">
+                    <div class="tools">
+                        <span class="reactTools">React</span>
+                        <span class="reactTools">JavaScript</span>
+                        <span class="reactTools">HTML</span>
+                        <span class="reactTools">CSS</span>
+                    </div>
+                    <a href="https://shambhu-ttt.web.app/" target="_blank" style="margin-left: 70px;">
+                        <button class="visit-site-btn">Visit Site</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-custom">
+            <img src="../photos/Excel img.png" class="card-img-top" alt="Excel Image">
+            <div class="card-body">
+                <p class="card-text">This project involved cleaning a dataset using Excel tools and creating pivot
+                    tables to summarize key insights. Filters were applied for easy data segmentation. The final output
+                    is a dashboard combining these pivot tables and visualizations, providing a clear, user-friendly
+                    interface for data analysis and decision-making.</p>
+                <div class="d-flex align-items-center">
+                    <div class="tools">
+                        <span class="excelTools">Excel</span>
+                        <span class="excelTools">Pivot Tables</span>
+                        <span class="excelTools">Data Cleaning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-custom">
+            <img src="../photos/Power Bi.png" class="card-img-top" alt="Power BI logo">
+            <div class="card-body">
+                <p class="card-text">This project involved Microsoft Power BI to analyze Excel data of data analyst
+                    learners and developers. After performing data cleaning in Power BI, I created an insightful
+                    dashboard that provided valuable outcomes and trends based on the raw data, enabling informed
+                    decision-making.</p>
+                <div class="d-flex align-items-center">
+                    <div class="tools">
+                        <span class="powerBiTools">Power BI</span>
+                        <span class="powerBiTools">Data Cleaning</span>
+                        <span class="powerBiTools">Dashboard Creation</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card-custom">
+            <img src="../photos/Python.png" class="card-img-top" alt="Python logo">
+            <div class="card-body">
+                <ul style="padding-left: 20px; margin-bottom: 20px;">
+                    <li style="margin-bottom: 15px;">
+                        <p class="card-text" style="margin-bottom: 10px;">Used Python to perform
+                            exploratory data analysis (EDA) on Diwali sales data. It involves cleaning the data and
+                            creating various visualizations to analyze sales trends and outcomes.</p>
+                    </li>
+                    <li style="margin-bottom: 15px;">
+                        <p class="card-text" style="margin-bottom: 10px;">Used Python to fetche cryptocurrency data from
+                            an API token, store it in a file after collecting data points at fixed interval, and
+                            performs analysis and visualizations to gain insights into
+                            crypto market trends.</p>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center" style="justify-content: start;">
+                    <!-- Skills Section -->
+                    <div class="tools" style="display: flex; gap: 10px;">
+                        <span class="pythonTools">Data Cleaning</span>
+                        <span class="pythonTools">Visualizations</span>
+                        <span class="pythonTools">API</span>
+                    </div>
+                    <!-- Buttons Section -->
+                    <div style="display: flex; gap: 10px;">
+                        <a href="https://github.com/shambhuj12/diwali_python_EDA" target="_blank">
+                            <button class="visit-site-btn"
+                                style="font-size: 16px; border-radius: 25px;margin-left: 55px;">Diwali
+                                Project</button>
+                        </a>
+                        <a href="https://github.com/shambhuj12/Crypto_Python_Project" target="_blank">
+                            <button class="visit-site-btn" style="font-size: 16px; border-radius: 25px; ">Crypto
+                                Project</button>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-custom">
+            <img src="../photos/OtherProjects2.jpg" class="card-img-top" alt="Tic Tac Toe Image">
+            <div class="card-body">
+                <ul style="padding-left: 20px; margin-bottom: 20px;">
+                    <h5>Some of my other projects Include: </h5>
+                    <li style="margin-bottom: 10px;">
+                        <p class="card-text" style="margin-bottom: 10px;">Used Ptolemy2 tool to simulate the working of
+                            Elevator.</p>
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <p class="card-text" style="margin-bottom: 10px;">Used MySQL to perform data cleaning and
+                            exploratory data analysis (EDA).</p>
+                    </li>
+                    <!-- <li style="margin-bottom: 10px;">
+                        <p class="card-text" style="margin-bottom: 10px;">Used Python and opencv library to create a
+                            smart human identification system system. </p>
+                    </li> -->
+                    <li style="margin-bottom: 10px;">
+                        <p class="card-text" style="margin-bottom: 10px;">Used Tableau software for data cleaning and
+                            creating visualizations for data analytics and useful insights </p>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center" style="justify-content: start;">
+                    <div class="tools" style="display: flex; gap: 10px;">
+                        <span class="otherTools">SQL</span>
+                        <span class="otherTools">Ptolemy</span>
+                        <span class="otherTools">OpenCV</span>
+                        <span class="otherTools">Tableau</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

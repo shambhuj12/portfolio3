@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        section {
+            padding: 20px 0;
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2,
+        p {
+            margin-bottom: 20px;
+        }
+
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-icons a {
+            display: inline-block;
+            padding: 12px;
+            border-radius: 50%;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .contact-icons a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-icons img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .contact-icons a:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="contact" class="py-5 card-custom2">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Feel free to connect with me through any of the following platforms:</p>
+            <div class="contact-icons">
+                <a href="https://github.com/shambhuj12" target="_blank" title="GitHub">
+                    <img src="../photos/github.png" alt="GitHub">
+                </a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#emailModal" title="Email">
+                    <img src="../photos/gmail.png" alt="Email">
+                </a>
+                <a href="https://www.linkedin.com/in/shambhu-jagtap/" target="_blank" title="LinkedIn">
+                    <img src="../photos/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://wa.me/+918999958655" target="_blank" title="WhatsApp">
+                    <img src="../photos/whatsapp.png" alt="WhatsApp">
+                </a>
+
+                <a href="https://www.instagram.com/sham_bhu_j/" target="_blank" title="Instagram">
+                    <img src="../photos/Instagram.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+        <div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="emailModalLabel">Contact Information</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Email: <strong>shambhujagtapcoc.com</strong>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
