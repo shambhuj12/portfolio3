@@ -1,0 +1,553 @@
+#about .about-content {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+#about .image-container {
+  flex-shrink: 0;
+  margin-right: 40px;
+}
+
+#about .image-container img {
+  max-width: 300px;
+  border-radius: 50%;
+}
+
+#about .text-container {
+  flex-grow: 1;
+}
+
+/* General Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* General Section Styling */
+section {
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Section Containers */
+section .container {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  max-width: 800px;
+  text-align: center;
+  margin: 20px 0;
+  border: solid 2px #0028535e;
+}
+
+section .container h2 {
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+section .container p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Apply magnification effect to the entire container */
+#about .container:hover {
+  transform: scale(1.1);
+  /* Magnification on hover */
+  z-index: 1;
+  /* Ensure the scaled content stays above other elements */
+}
+
+/* Styles only for the resume section */
+#resume {
+  padding: 20px 0;
+}
+
+/* Styles for the container within the resume section */
+#resume .container {
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the container within the resume section */
+#resume .container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for h2 and p elements within the resume section */
+#resume h2,
+#resume p {
+  margin-bottom: 20px;
+}
+
+/* Styles for the download button within the resume section */
+#resume .visit-site-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  font-size: 14px;
+  border-radius: 25px;
+  /* Rounded button */
+  transition: all 0.3s ease-in-out;
+  /* Smooth hover effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Soft shadow */
+}
+
+/* Hover effect for the download button within the resume section */
+#resume .visit-site-btn:hover {
+  background-color: #45a049;
+  /* Slightly darker green on hover */
+  transform: scale(1.05);
+  /* Subtle grow effect */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  /* Slightly deeper shadow */
+}
+
+#certificates-section h2 {
+  color: #007bff;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#certificates-section .certificate-custom {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin: 40px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  border: solid 2px #0066804e;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+}
+
+#certificates-section .certificate-custom:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#certificates-section .card-text {
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+#certificates-section .view-cert-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+#certificates-section .view-cert-btn:hover {
+  background-color: #3f9443;
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  #certificates-section .certificate-custom {
+    width: 80%;
+  }
+}
+
+#contact {
+  padding: 20px 0;
+}
+
+#contact .container {
+  padding: 20px;
+  text-align: center;
+}
+
+#contact h2,
+#contact p {
+  margin-bottom: 20px;
+}
+
+#contact .contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#contact .contact-icons a {
+  display: inline-block;
+  padding: 12px;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+#contact .contact-icons a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+#contact .contact-icons img {
+  width: 40px;
+  height: 40px;
+}
+
+#contact .contact-icons a:focus {
+  outline: none;
+}
+
+/* Scope all styles under a unique container class */
+.custom-navbar-container .navbar {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #1fa9ffca;
+  border-radius: 15px;
+  width: 70%;
+  margin: 20px auto;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease,
+    border-radius 0.3s ease;
+}
+
+.custom-navbar-container .navbar.scrolled {
+  background-color: #87ceeb;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.custom-navbar-container .navbar .navbar-brand {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.custom-navbar-container .navbar .navbar-brand:hover {
+  color: #003268;
+}
+
+.custom-navbar-container .navbar .nav-link {
+  color: #fff;
+  margin: 0 15px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-navbar-container .navbar .nav-link:hover {
+  color: #003268;
+  transform: translateY(-3px);
+}
+
+.custom-navbar-container .navbar-toggler {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: background-color 0.3s ease;
+}
+
+.custom-navbar-container .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Smooth Scroll Animation */
+.custom-navbar-container {
+  scroll-behavior: smooth;
+}
+
+/* Adding animations */
+.custom-navbar-container .navbar .nav-link {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+.custom-navbar-container .navbar .nav-link:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.custom-navbar-container .navbar .nav-link:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.custom-navbar-container .navbar .nav-link:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.custom-navbar-container .navbar .nav-link:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Title Styling */
+#projects #heading {
+  color: #007bff;
+  text-align: center;
+  margin-top: 40px;
+}
+
+#projects #projects {
+  padding: 10px;
+}
+
+#projects .card-custom {
+  width: 60%;
+  /* 80% of the horizontal page size */
+  display: flex;
+  /* Using flexbox */
+  flex-direction: row;
+  /* Align image and text side by side */
+  margin: 40px auto;
+  /* Centering the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  /* Rounded corners for the card */
+  border: solid 2px #0028535e;
+  /* Blue border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+  /* Padding between cards */
+}
+
+#projects .card-custom img {
+  width: 100%;
+  /* Image takes up 100% of the card's width */
+  max-width: 200px;
+  /* Ensure the image doesn't get too large on bigger screens */
+  object-fit: cover;
+  /* Ensures the image covers the space */
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  margin: 20px;
+  /* Adding margin around the image */
+  border-radius: 10px;
+  /* Rounded corners for the image */
+}
+
+#projects .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 20px 20px 20px;
+  text-align: left;
+  /* Aligning the text to the left */
+  width: 60%;
+  /* Text takes up 60% of the card width */
+}
+
+/* Hover effect to magnify the card */
+#projects .card-custom:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the Tools/Language section */
+#projects .tools {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* technology styles */
+#projects .reactTools {
+  background-color: #61dcfb7d;
+  color: #20232a;
+  padding: 2px 8px;
+  border-radius: 5px;
+  margin: 3px;
+}
+
+#projects .excelTools {
+  background-color: #00c8466c;
+  color: #20232a;
+  padding: 2px 8px;
+  border-radius: 5px;
+  margin: 3px;
+}
+
+#projects .powerBiTools {
+  background-color: #c1c8006c;
+  color: #20232a;
+  padding: 2px 8px;
+  border-radius: 5px;
+  margin: 3px;
+}
+
+#projects .pythonTools {
+  background-color: #9d00c86c;
+  color: #20232a;
+  padding: 2px 8px;
+  border-radius: 5px;
+  margin: 3px;
+}
+
+#projects .otherTools {
+  background-color: #c800006c;
+  color: #20232a;
+  padding: 2px 8px;
+  border-radius: 5px;
+  margin: 3px;
+}
+
+/* Styling for the Visit Site button */
+#projects .visit-site-btn {
+  background-color: #4caf50;
+  /* A sleek green for a professional look */
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  font-size: 14px;
+  border-radius: 25px;
+  /* Rounded button */
+
+  /* Aligns the button to the right */
+  transition: all 0.3s ease-in-out;
+  /* Smooth hover effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Soft shadow */
+}
+
+#projects .visit-site-btn:hover {
+  background-color: #45a049;
+  /* Slightly darker green on hover */
+  transform: scale(1.05);
+  /* Subtle grow effect */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  /* Slightly deeper shadow */
+}
+
+/* Styles only for the resume section */
+#resume {
+  padding: 20px 0;
+}
+
+/* Styles for the container within the resume section */
+#resume .container {
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the container within the resume section */
+#resume .container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for h2 and p elements within the resume section */
+#resume h2,
+#resume p {
+  margin-bottom: 20px;
+}
+
+/* Styles for the download button within the resume section */
+#resume .visit-site-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  font-size: 14px;
+  border-radius: 25px;
+  /* Rounded button */
+  transition: all 0.3s ease-in-out;
+  /* Smooth hover effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Soft shadow */
+}
+
+/* Hover effect for the download button within the resume section */
+#resume .visit-site-btn:hover {
+  background-color: #45a049;
+  /* Slightly darker green on hover */
+  transform: scale(1.05);
+  /* Subtle grow effect */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  /* Slightly deeper shadow */
+}
+
+#certificates-section h2 {
+  color: #007bff;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#certificates-section .certificate-custom {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin: 40px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  border: solid 2px #0066804e;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+}
+
+#certificates-section .certificate-custom:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#certificates-section .card-text {
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+#certificates-section .view-cert-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+#certificates-section .view-cert-btn:hover {
+  background-color: #3f9443;
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  #certificates-section .certificate-custom {
+    width: 80%;
+  }
+}
